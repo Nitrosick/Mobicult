@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+#__nuxt {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  font-size: var(--font-size-m);
+  color: $color-text;
+  line-height: 1.5;
+  background:
+    url(/images/dot.svg),
+    url(/images/triangles.svg) var(--unit) 0 no-repeat,
+    url(/images/zigzag.svg) 100% 95% no-repeat;
+  background-color: $color-bg;
+
+  @include bp-xs {
+    background: $color-bg url(/images/dot.svg);
+  }
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  font-size: var(--font-size-xl);
+  font-weight: 500;
+  margin: calc(var(--unit) / 2) 0 0 calc(var(--unit) * 5);
+
+  @include bp-xs {
+    margin: calc(var(--unit) / 2) 0 0 0;
+  }
+}
+
+::selection {
+  color: white;
+  background-color: var(--color-peach);
+}
+
+::-moz-selection {
+  color: white;
+  background-color: var(--color-peach);
+}
